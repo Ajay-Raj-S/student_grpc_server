@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message get_student_id {
+	uint32 student_id = 1;
+}
+
+message return_student_details {
+	string student_name = 1;
+}
+message empty_student_details {
+	string student_details = 1;
+}
+
+service Students {
+	rpc StudentDetails(get_student_id) returns (return_student_details);
+}
